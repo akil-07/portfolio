@@ -1,4 +1,4 @@
-import { Globe, Mail, Link, GitBranch } from 'lucide-react';
+import { Globe, Mail, GitBranch } from 'lucide-react';
 import { MinimalistHero } from '@/components/ui/minimalist-hero';
 import { AboutSection } from '@/components/ui/about-section';
 import { Quote } from '@/components/ui/quote-section';
