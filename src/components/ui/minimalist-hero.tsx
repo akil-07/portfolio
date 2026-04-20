@@ -142,12 +142,21 @@ export const MinimalistHero = ({
                   }}
                   className="hidden md:block"
                 >
-                  <div className="relative">
+                  <motion.div
+                    animate={{ y: [0, -10, 0] }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: index * 0.2
+                    }}
+                    className="relative"
+                  >
                     <div className="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg shadow-xl text-xs font-bold tracking-wider text-white whitespace-nowrap overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/5 before:to-transparent before:-translate-x-full hover:before:animate-[shimmer_1.5s_infinite] isolate">
                       {point.text}
                     </div>
                     <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-white/10 backdrop-blur-md border-r border-b border-white/20 rotate-45" />
-                  </div>
+                  </motion.div>
                 </motion.div>
               ))}
             </AnimatePresence>
