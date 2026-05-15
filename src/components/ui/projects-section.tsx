@@ -55,9 +55,17 @@ const ProjectItem = ({ project, index }: { project: typeof projects[0], index: n
   return (
     <motion.a
       href={project.link}
-      initial={{ opacity: 0, x: -20 }}
-      whileInView={{ opacity: 1, x: 0 }}
+      initial="initial"
+      whileInView="animate"
+      whileHover="hover"
+      whileTap="tap"
       viewport={{ once: true, margin: "-50px" }}
+      variants={{
+        initial: { opacity: 0, x: -20 },
+        animate: { opacity: 1, x: 0 },
+        hover: { x: 10 },
+        tap: { scale: 0.98 }
+      }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -101,9 +109,16 @@ const ProjectItem = ({ project, index }: { project: typeof projects[0], index: n
       </AnimatePresence>
 
       <div className="flex items-center space-x-6 relative z-20">
-        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#EBB000] text-background opacity-0 transition-all group-hover:opacity-100 group-hover:scale-110">
+        <motion.div 
+          variants={{
+            initial: { opacity: 0, scale: 0.5, rotate: -45 },
+            hover: { opacity: 1, scale: 1.1, rotate: 0 },
+            tap: { scale: 0.9, rotate: 15 }
+          }}
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-[#EBB000] text-background transition-all"
+        >
           <ArrowUpRight className="h-5 w-5" />
-        </div>
+        </motion.div>
       </div>
     </motion.a>
   );

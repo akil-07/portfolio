@@ -105,9 +105,14 @@ export const MinimalistHero = ({
           className="z-20 order-2 md:order-1 text-center md:text-left"
         >
           <p className="mx-auto max-w-xs text-sm leading-relaxed text-foreground/80 md:mx-0">{mainText}</p>
-          <a href={readMoreLink} className="mt-4 inline-block text-sm font-medium text-foreground underline decoration-from-font">
+          <motion.a 
+            href={readMoreLink} 
+            whileHover={{ x: 5 }}
+            whileTap={{ scale: 0.95 }}
+            className="mt-4 inline-block text-sm font-medium text-foreground underline decoration-from-font cursor-pointer"
+          >
             Read More
-          </a>
+          </motion.a>
         </motion.div>
 
         {/* Center Image with Circle */}
