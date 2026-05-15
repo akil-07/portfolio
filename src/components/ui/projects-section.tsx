@@ -4,6 +4,17 @@ import { ArrowUpRight } from 'lucide-react';
 
 const projects = [
   {
+    title: 'Twogether',
+    category: 'Real-time Communication',
+    link: 'https://twogether-flax.vercel.app/app',
+    info: [
+      { text: "Real-time Messaging", x: "15%", y: "-45%" },
+      { text: "Video & Voice Calls", x: "80%", y: "-25%" },
+      { text: "Desktop & Web App", x: "25%", y: "135%" },
+      { text: "Modern Interface", x: "70%", y: "115%" },
+    ]
+  },
+  {
     title: 'Hostel Bites',
     category: 'E-Commerce',
     link: 'https://hostel-application-omega.vercel.app/menu',
