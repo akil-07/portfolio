@@ -6,7 +6,6 @@ const projects = [
   {
     title: 'Hostel Bites',
     category: 'E-Commerce',
-    year: '2024',
     link: 'https://hostel-application-omega.vercel.app/menu',
     info: [
       { text: "React & Node.js", x: "10%", y: "-40%" },
@@ -18,7 +17,6 @@ const projects = [
   {
     title: 'SEC Hostel Approval',
     category: 'Web Application',
-    year: '2024',
     link: 'https://sec-hostel-approval.vercel.app/',
     info: [
       { text: "Workflow Automation", x: "15%", y: "-45%" },
@@ -30,7 +28,6 @@ const projects = [
   {
     title: 'My Progress',
     category: 'Student Companion App',
-    year: '2024',
     link: 'https://my-progress-one.vercel.app/',
     info: [
       { text: "Progress Tracking", x: "12%", y: "-50%" },
@@ -93,7 +90,6 @@ const ProjectItem = ({ project, index }: { project: typeof projects[0], index: n
       </AnimatePresence>
 
       <div className="flex items-center space-x-6 relative z-20">
-        <span className="hidden text-sm font-medium text-foreground/50 md:block">{project.year}</span>
         <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#EBB000] text-background opacity-0 transition-all group-hover:opacity-100 group-hover:scale-110">
           <ArrowUpRight className="h-5 w-5" />
         </div>
